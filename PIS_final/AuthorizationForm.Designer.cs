@@ -102,7 +102,7 @@
             authorizationGroupBox.Controls.Add(loginLabel);
             authorizationGroupBox.Controls.Add(loginTextBox);
             authorizationGroupBox.Controls.Add(passwordLabel);
-            authorizationGroupBox.Location = new Point(81, 103);
+            authorizationGroupBox.Location = new Point(80, 96);
             authorizationGroupBox.Name = "authorizationGroupBox";
             authorizationGroupBox.Size = new Size(361, 302);
             authorizationGroupBox.TabIndex = 6;

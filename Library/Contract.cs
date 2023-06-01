@@ -13,7 +13,6 @@ namespace Library
         public DateTime ValidUntil { get; set; }
         public Organization Executor { get; set; }
         public Organization Client { get; set; }
-        public List<Locality> LocalitiesList { get; set; }
-
+        public List<Locality> LocalitiesList { get; set; } = new List<Locality>();
     }
 }
