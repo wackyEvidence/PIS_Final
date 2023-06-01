@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
+namespace Library.Models
 {
-    internal class Locality
+    public class Locality
     {
         public string Name { get; set; }
         public int MedicalExaminationCost { get; set; }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.Models;
 
-namespace Library
+namespace Library.DBAdapters
 {
-    public static class PermissionManagerFactory
+    internal static class AnimalsDBAdapter
     {
-        public static PermissionManager GetPermissionManager(User user)
+        public static List<Animal> GetAnimalsList(Filter filter, Sort sort)
         {
             throw new NotImplementedException();
         }

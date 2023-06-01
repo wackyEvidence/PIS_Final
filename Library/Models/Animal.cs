@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
+namespace Library.Models
 {
     internal class Animal
     {
@@ -17,9 +17,9 @@ namespace Library
         public int BirthYear { get; set; }
         public int ChipNumber { get; set; }
         public string Nickname { get; set; }
-        public Bitmap Photo { get; set; }
+        public string Photo { get; set; }
         public string DistinguishingMarks { get; set; }
         public string OwnerSigns { get; set; }
-        public List<MedicalExamination> MedicalExaminations { get; set; } = new List<MedicalExamination>(); 
+        public List<MedicalExamination> MedicalExaminations { get; set; } = new List<MedicalExamination>();
     }
 }

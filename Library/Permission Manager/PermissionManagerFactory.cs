@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Library.Models;
 
 namespace Library
 {
-    public abstract class PermissionManager
+    public static class PermissionManagerFactory
     {
-        public PermissionManager(User user)
+        public static PermissionManager GetPermissionManager(User user)
         {
             throw new NotImplementedException();
         }
-
-        abstract public bool CanChange { get; set; }
-        abstract public Dictionary<string, string> GetReadFilter(); 
     }
 }

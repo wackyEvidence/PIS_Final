@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
+namespace Library.Models
 {
-    internal class Organization
+    public class Organization
     {
         public string FullName { get; set; }
         public string INN { get; set; }

@@ -5,10 +5,23 @@
         Dog, 
         Cat
     }
-
+    
     public enum UserRole
     {
-
+        VetServiceCurator, // куратор вет. службы 
+        TrappingCurator, // куратор по отлову
+        AnimalShelterCurator, // куратор приюта 
+        VetServiceOperator, // оператор вет службы
+        TrappingOperator, // оператор по отлову 
+        VetServiceSignatory, // подписант вет. службы 
+        TrappingSignatory, // подписант по отлову
+        AnimalShelterSignatory, // подписант приюта 
+        OMSU_Curator, // куратор ОМСУ, 
+        OMSU_Signatory, // подписант ОМСУ
+        OMSU_Operator, // оператор ОМСУ
+        AnimalShelterOperator, // оператор приюта 
+        Veterinarian, // ветврач
+        AnimalShelterVeterinarian // ветврач приюта
     }
 
     public enum OrganizationalAttribute

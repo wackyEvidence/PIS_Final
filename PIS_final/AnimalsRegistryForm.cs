@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class MainMenu : Form
+    public partial class AnimalsRegistryForm : Form
     {
-        public MainMenu()
+        public AnimalsRegistryForm()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var card = new AnimalCardForm();
+            card.Show(); 
         }
     }
 }

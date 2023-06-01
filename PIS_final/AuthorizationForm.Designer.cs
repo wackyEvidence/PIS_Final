@@ -79,6 +79,7 @@
             authorizeButton.TabIndex = 3;
             authorizeButton.Text = "ОК";
             authorizeButton.UseVisualStyleBackColor = true;
+            authorizeButton.Click += authorizeButton_Click;
             // 
             // loginTextBox
             // 
