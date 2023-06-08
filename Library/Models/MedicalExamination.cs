@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class MedicalExamination
+    public class MedicalExamination
     {
         public Animal ExaminedAnimal { get; set; }
         public string BehaviorFeatures { get; set; }

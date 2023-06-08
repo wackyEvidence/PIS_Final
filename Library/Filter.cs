@@ -8,7 +8,6 @@ namespace Library
 {
     public class Filter
     {
-        public Filter() { }
         public Filter(string field, string value)
         {
             Field = field;

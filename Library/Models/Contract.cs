@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class Contract
+    public class Contract
     {
         public int Id { get; set; }
         public int Number { get; set; }

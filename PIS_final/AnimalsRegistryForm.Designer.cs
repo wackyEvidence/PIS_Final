@@ -31,21 +31,23 @@
             headerLabel = new Label();
             dataGridView1 = new DataGridView();
             filterGroupBox = new GroupBox();
+            applyFilterButton = new Button();
             clearFilterButton = new Button();
             filterAttributeLabel = new Label();
             filterAttributeComboBox = new ComboBox();
             filterValueLabel = new Label();
             filterValueTextBox = new TextBox();
-            authorizeButton = new Button();
+            addAnimalRecordButton = new Button();
             sortOrderLabel = new Label();
             comboBox1 = new ComboBox();
             sortAttributeLabel = new Label();
             sortAttributeComboBox = new ComboBox();
             sortGroupBox = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            applySortButton = new Button();
+            clearSortButton = new Button();
+            viewAnimalCardButton = new Button();
+            exportRegistryToExcelButton = new Button();
+            deleteAnimalCardButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             filterGroupBox.SuspendLayout();
             sortGroupBox.SuspendLayout();
@@ -79,6 +81,7 @@
             // 
             // filterGroupBox
             // 
+            filterGroupBox.Controls.Add(applyFilterButton);
             filterGroupBox.Controls.Add(clearFilterButton);
             filterGroupBox.Controls.Add(filterAttributeLabel);
             filterGroupBox.Controls.Add(filterAttributeComboBox);
@@ -88,21 +91,34 @@
             filterGroupBox.ForeColor = Color.FromArgb(53, 153, 255);
             filterGroupBox.Location = new Point(747, 99);
             filterGroupBox.Name = "filterGroupBox";
-            filterGroupBox.Size = new Size(580, 228);
+            filterGroupBox.Size = new Size(580, 282);
             filterGroupBox.TabIndex = 4;
             filterGroupBox.TabStop = false;
             filterGroupBox.Text = "Фильтрация:";
+            // 
+            // applyFilterButton
+            // 
+            applyFilterButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            applyFilterButton.ForeColor = Color.FromArgb(53, 153, 255);
+            applyFilterButton.Location = new Point(16, 160);
+            applyFilterButton.Name = "applyFilterButton";
+            applyFilterButton.Size = new Size(270, 55);
+            applyFilterButton.TabIndex = 15;
+            applyFilterButton.Text = "Применить фильтр";
+            applyFilterButton.UseVisualStyleBackColor = true;
+            applyFilterButton.Click += applyFilterButton_Click;
             // 
             // clearFilterButton
             // 
             clearFilterButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             clearFilterButton.ForeColor = Color.FromArgb(53, 153, 255);
-            clearFilterButton.Location = new Point(16, 161);
+            clearFilterButton.Location = new Point(16, 221);
             clearFilterButton.Name = "clearFilterButton";
-            clearFilterButton.Size = new Size(228, 51);
+            clearFilterButton.Size = new Size(231, 55);
             clearFilterButton.TabIndex = 14;
             clearFilterButton.Text = "Убрать фильтр";
             clearFilterButton.UseVisualStyleBackColor = true;
+            clearFilterButton.Click += clearFilterButton_Click;
             // 
             // filterAttributeLabel
             // 
@@ -141,15 +157,16 @@
             filterValueTextBox.Size = new Size(185, 43);
             filterValueTextBox.TabIndex = 7;
             // 
-            // authorizeButton
+            // addAnimalRecordButton
             // 
-            authorizeButton.ForeColor = Color.FromArgb(53, 153, 255);
-            authorizeButton.Location = new Point(15, 604);
-            authorizeButton.Name = "authorizeButton";
-            authorizeButton.Size = new Size(163, 86);
-            authorizeButton.TabIndex = 5;
-            authorizeButton.Text = "Добавить карточку";
-            authorizeButton.UseVisualStyleBackColor = true;
+            addAnimalRecordButton.ForeColor = Color.FromArgb(53, 153, 255);
+            addAnimalRecordButton.Location = new Point(15, 604);
+            addAnimalRecordButton.Name = "addAnimalRecordButton";
+            addAnimalRecordButton.Size = new Size(163, 86);
+            addAnimalRecordButton.TabIndex = 5;
+            addAnimalRecordButton.Text = "Добавить карточку";
+            addAnimalRecordButton.UseVisualStyleBackColor = true;
+            addAnimalRecordButton.Click += addAnimalRecordButton_Click;
             // 
             // sortOrderLabel
             // 
@@ -165,7 +182,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(234, 95);
+            comboBox1.Location = new Point(249, 93);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(196, 45);
             comboBox1.TabIndex = 11;
@@ -191,61 +208,77 @@
             // 
             // sortGroupBox
             // 
-            sortGroupBox.Controls.Add(button1);
+            sortGroupBox.Controls.Add(applySortButton);
+            sortGroupBox.Controls.Add(clearSortButton);
             sortGroupBox.Controls.Add(sortAttributeLabel);
             sortGroupBox.Controls.Add(sortAttributeComboBox);
             sortGroupBox.Controls.Add(sortOrderLabel);
             sortGroupBox.Controls.Add(comboBox1);
             sortGroupBox.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             sortGroupBox.ForeColor = Color.FromArgb(53, 153, 255);
-            sortGroupBox.Location = new Point(747, 345);
+            sortGroupBox.Location = new Point(747, 402);
             sortGroupBox.Name = "sortGroupBox";
-            sortGroupBox.Size = new Size(580, 228);
+            sortGroupBox.Size = new Size(580, 288);
             sortGroupBox.TabIndex = 15;
             sortGroupBox.TabStop = false;
             sortGroupBox.Text = "Сортировка:";
             // 
-            // button1
+            // applySortButton
             // 
-            button1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(53, 153, 255);
-            button1.Location = new Point(16, 161);
-            button1.Name = "button1";
-            button1.Size = new Size(270, 51);
-            button1.TabIndex = 14;
-            button1.Text = "Убрать сортировку";
-            button1.UseVisualStyleBackColor = true;
+            applySortButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            applySortButton.ForeColor = Color.FromArgb(53, 153, 255);
+            applySortButton.Location = new Point(16, 166);
+            applySortButton.Name = "applySortButton";
+            applySortButton.Size = new Size(324, 55);
+            applySortButton.TabIndex = 15;
+            applySortButton.Text = "Применить сортировку";
+            applySortButton.UseVisualStyleBackColor = true;
+            applySortButton.Click += applySortButton_Click;
             // 
-            // button2
+            // clearSortButton
             // 
-            button2.ForeColor = Color.FromArgb(53, 153, 255);
-            button2.Location = new Point(195, 604);
-            button2.Name = "button2";
-            button2.Size = new Size(163, 86);
-            button2.TabIndex = 16;
-            button2.Text = "Открыть карточку";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            clearSortButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            clearSortButton.ForeColor = Color.FromArgb(53, 153, 255);
+            clearSortButton.Location = new Point(16, 227);
+            clearSortButton.Name = "clearSortButton";
+            clearSortButton.Size = new Size(285, 55);
+            clearSortButton.TabIndex = 14;
+            clearSortButton.Text = "Убрать сортировку";
+            clearSortButton.UseVisualStyleBackColor = true;
+            clearSortButton.Click += clearSortButton_Click;
             // 
-            // button3
+            // viewAnimalCardButton
             // 
-            button3.ForeColor = Color.FromArgb(53, 153, 255);
-            button3.Location = new Point(555, 604);
-            button3.Name = "button3";
-            button3.Size = new Size(155, 86);
-            button3.TabIndex = 17;
-            button3.Text = "Экспорт в Excel";
-            button3.UseVisualStyleBackColor = true;
+            viewAnimalCardButton.ForeColor = Color.FromArgb(53, 153, 255);
+            viewAnimalCardButton.Location = new Point(195, 604);
+            viewAnimalCardButton.Name = "viewAnimalCardButton";
+            viewAnimalCardButton.Size = new Size(163, 86);
+            viewAnimalCardButton.TabIndex = 16;
+            viewAnimalCardButton.Text = "Открыть карточку";
+            viewAnimalCardButton.UseVisualStyleBackColor = true;
+            viewAnimalCardButton.Click += viewAnimalCardButton_Click;
             // 
-            // button4
+            // exportRegistryToExcelButton
             // 
-            button4.ForeColor = Color.FromArgb(53, 153, 255);
-            button4.Location = new Point(375, 604);
-            button4.Name = "button4";
-            button4.Size = new Size(163, 86);
-            button4.TabIndex = 18;
-            button4.Text = "Удалить карточку";
-            button4.UseVisualStyleBackColor = true;
+            exportRegistryToExcelButton.ForeColor = Color.FromArgb(53, 153, 255);
+            exportRegistryToExcelButton.Location = new Point(555, 604);
+            exportRegistryToExcelButton.Name = "exportRegistryToExcelButton";
+            exportRegistryToExcelButton.Size = new Size(155, 86);
+            exportRegistryToExcelButton.TabIndex = 17;
+            exportRegistryToExcelButton.Text = "Экспорт в Excel";
+            exportRegistryToExcelButton.UseVisualStyleBackColor = true;
+            exportRegistryToExcelButton.Click += exportRegistryToExcelButton_Click;
+            // 
+            // deleteAnimalCardButton
+            // 
+            deleteAnimalCardButton.ForeColor = Color.FromArgb(53, 153, 255);
+            deleteAnimalCardButton.Location = new Point(375, 604);
+            deleteAnimalCardButton.Name = "deleteAnimalCardButton";
+            deleteAnimalCardButton.Size = new Size(163, 86);
+            deleteAnimalCardButton.TabIndex = 18;
+            deleteAnimalCardButton.Text = "Удалить карточку";
+            deleteAnimalCardButton.UseVisualStyleBackColor = true;
+            deleteAnimalCardButton.Click += deleteAnimalCardButton_Click;
             // 
             // AnimalsRegistryForm
             // 
@@ -253,11 +286,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1368, 735);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(deleteAnimalCardButton);
+            Controls.Add(exportRegistryToExcelButton);
+            Controls.Add(viewAnimalCardButton);
             Controls.Add(sortGroupBox);
-            Controls.Add(authorizeButton);
+            Controls.Add(addAnimalRecordButton);
             Controls.Add(filterGroupBox);
             Controls.Add(dataGridView1);
             Controls.Add(headerLabel);
@@ -280,7 +313,7 @@
         private Label headerLabel;
         private DataGridView dataGridView1;
         private GroupBox filterGroupBox;
-        private Button authorizeButton;
+        private Button addAnimalRecordButton;
         private Label filterValueLabel;
         private TextBox filterValueTextBox;
         private Label filterAttributeLabel;
@@ -291,9 +324,11 @@
         private ComboBox sortAttributeComboBox;
         private Button clearFilterButton;
         private GroupBox sortGroupBox;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button clearSortButton;
+        private Button viewAnimalCardButton;
+        private Button exportRegistryToExcelButton;
+        private Button deleteAnimalCardButton;
+        private Button applyFilterButton;
+        private Button applySortButton;
     }
 }

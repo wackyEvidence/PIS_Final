@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Library.Registries
 {
-    internal class AnimalsRegistry
+    public class AnimalsRegistry
     {
         private List<Filter> permissionManagerFilters;
         public AnimalsRegistry(PermissionManager userPM) => permissionManagerFilters = userPM.GetAnimalsReadFilters;

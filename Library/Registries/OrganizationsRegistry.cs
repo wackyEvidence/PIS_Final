@@ -8,7 +8,7 @@ using Library.Models;
 
 namespace Library.Registries
 {
-    internal class OrganizationsRegistry
+    public class OrganizationsRegistry
     {
         private List<Filter> permissionManagerFilters;
         public OrganizationsRegistry(PermissionManager userPM) => permissionManagerFilters = userPM.GetOrganizationsReadFilters; 

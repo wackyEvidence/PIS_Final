@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    internal class Animal
+    public class Animal
     {
         public Animal(Dictionary<string, string> animal)
         {

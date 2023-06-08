@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    internal class Sort
+    public class Sort
     {
         public string Field { get; set; }
         public SortOrder Type { get; set; }
