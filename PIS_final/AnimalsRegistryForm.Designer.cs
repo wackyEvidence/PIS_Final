@@ -39,7 +39,7 @@
             filterValueTextBox = new TextBox();
             addAnimalRecordButton = new Button();
             sortOrderLabel = new Label();
-            comboBox1 = new ComboBox();
+            sortOrderComboBox = new ComboBox();
             sortAttributeLabel = new Label();
             sortAttributeComboBox = new ComboBox();
             sortGroupBox = new GroupBox();
@@ -69,14 +69,20 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dataGridView1.BackgroundColor = Color.Gainsboro;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(15, 99);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(695, 474);
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(931, 474);
             dataGridView1.TabIndex = 3;
             // 
             // filterGroupBox
@@ -89,9 +95,9 @@
             filterGroupBox.Controls.Add(filterValueTextBox);
             filterGroupBox.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             filterGroupBox.ForeColor = Color.FromArgb(53, 153, 255);
-            filterGroupBox.Location = new Point(747, 99);
+            filterGroupBox.Location = new Point(973, 81);
             filterGroupBox.Name = "filterGroupBox";
-            filterGroupBox.Size = new Size(580, 282);
+            filterGroupBox.Size = new Size(645, 282);
             filterGroupBox.TabIndex = 4;
             filterGroupBox.TabStop = false;
             filterGroupBox.Text = "Фильтрация:";
@@ -136,7 +142,7 @@
             filterAttributeComboBox.FormattingEnabled = true;
             filterAttributeComboBox.Location = new Point(325, 41);
             filterAttributeComboBox.Name = "filterAttributeComboBox";
-            filterAttributeComboBox.Size = new Size(233, 45);
+            filterAttributeComboBox.Size = new Size(314, 45);
             filterAttributeComboBox.TabIndex = 8;
             // 
             // filterValueLabel
@@ -154,7 +160,7 @@
             // 
             filterValueTextBox.Location = new Point(382, 95);
             filterValueTextBox.Name = "filterValueTextBox";
-            filterValueTextBox.Size = new Size(185, 43);
+            filterValueTextBox.Size = new Size(257, 43);
             filterValueTextBox.TabIndex = 7;
             // 
             // addAnimalRecordButton
@@ -179,13 +185,14 @@
             sortOrderLabel.TabIndex = 10;
             sortOrderLabel.Text = "Сортировать по ";
             // 
-            // comboBox1
+            // sortOrderComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(249, 93);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(196, 45);
-            comboBox1.TabIndex = 11;
+            sortOrderComboBox.FormattingEnabled = true;
+            sortOrderComboBox.Items.AddRange(new object[] { "возрастанию", "убыванию" });
+            sortOrderComboBox.Location = new Point(249, 93);
+            sortOrderComboBox.Name = "sortOrderComboBox";
+            sortOrderComboBox.Size = new Size(196, 45);
+            sortOrderComboBox.TabIndex = 11;
             // 
             // sortAttributeLabel
             // 
@@ -203,7 +210,7 @@
             sortAttributeComboBox.FormattingEnabled = true;
             sortAttributeComboBox.Location = new Point(320, 41);
             sortAttributeComboBox.Name = "sortAttributeComboBox";
-            sortAttributeComboBox.Size = new Size(233, 45);
+            sortAttributeComboBox.Size = new Size(319, 45);
             sortAttributeComboBox.TabIndex = 12;
             // 
             // sortGroupBox
@@ -213,12 +220,12 @@
             sortGroupBox.Controls.Add(sortAttributeLabel);
             sortGroupBox.Controls.Add(sortAttributeComboBox);
             sortGroupBox.Controls.Add(sortOrderLabel);
-            sortGroupBox.Controls.Add(comboBox1);
+            sortGroupBox.Controls.Add(sortOrderComboBox);
             sortGroupBox.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             sortGroupBox.ForeColor = Color.FromArgb(53, 153, 255);
-            sortGroupBox.Location = new Point(747, 402);
+            sortGroupBox.Location = new Point(973, 402);
             sortGroupBox.Name = "sortGroupBox";
-            sortGroupBox.Size = new Size(580, 288);
+            sortGroupBox.Size = new Size(645, 288);
             sortGroupBox.TabIndex = 15;
             sortGroupBox.TabStop = false;
             sortGroupBox.Text = "Сортировка:";
@@ -285,7 +292,7 @@
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1368, 735);
+            ClientSize = new Size(1630, 735);
             Controls.Add(deleteAnimalCardButton);
             Controls.Add(exportRegistryToExcelButton);
             Controls.Add(viewAnimalCardButton);
@@ -318,7 +325,7 @@
         private TextBox filterValueTextBox;
         private Label filterAttributeLabel;
         private ComboBox filterAttributeComboBox;
-        private ComboBox comboBox1;
+        private ComboBox sortOrderComboBox;
         private Label sortOrderLabel;
         private Label sortAttributeLabel;
         private ComboBox sortAttributeComboBox;

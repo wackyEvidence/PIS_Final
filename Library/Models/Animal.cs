@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,8 +15,10 @@ namespace Library.Models
         {
             Id = int.Parse(animal["Id"]);
             RegCardNumber = int.Parse(animal["RegCardNumber"]);
-            Location = (Location)int.Parse(animal["Location"]);
-            Category = (AnimalCategory)int.Parse(animal["Category"]);
+            //Location = (Location)int.Parse(animal["Location"]);
+            //Category = (AnimalCategory)int.Parse(animal["Category"]);
+            Location = animal["Location"];
+            Category = animal["Category"];
             Sex = animal["Sex"];
             BirthYear = int.Parse(animal["BirthYear"]);
             ChipNumber = int.Parse(animal["ChipNumber"]);
@@ -28,8 +31,10 @@ namespace Library.Models
 
         public int Id { get; set; }
         public int RegCardNumber { get; set; }
-        public Location Location { get; set; }
-        public AnimalCategory Category { get; set; }
+        //public Location Location { get; set; }
+        public string Location { get; set; }
+        //public AnimalCategory Category { get; set; }
+        public string Category { get; set; }  
         public string Sex { get; set; } 
         public int BirthYear { get; set; }
         public int ChipNumber { get; set; }
@@ -37,6 +42,23 @@ namespace Library.Models
         public string Photo { get; set; }
         public string DistinguishingMarks { get; set; }
         public List<OwnerSign> OwnerSigns { get; set; }
-        public List<MedicalExamination> MedicalExaminations { get; set; } = new List<MedicalExamination>();
+        //public List<MedicalExamination> MedicalExaminations { get; set; } = new List<MedicalExamination>();
+        //public bool IsCorrect 
+        //{ 
+        //    get
+        //    {
+        //        foreach(var property in GetType().GetProperties())
+        //        {
+        //            var type = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+
+            
+        //            if (property.GetValue(this) == default(type.GetType())
+        //            {
+                        
+        //            }
+        //        }
+        //        return true; 
+        //    }
+        //}
     }
 }

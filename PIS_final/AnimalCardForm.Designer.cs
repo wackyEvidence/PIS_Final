@@ -267,6 +267,7 @@
             applyChangesOrAddAnimalButton.TabIndex = 31;
             applyChangesOrAddAnimalButton.Text = "Сохранить изменения";
             applyChangesOrAddAnimalButton.UseVisualStyleBackColor = true;
+            applyChangesOrAddAnimalButton.Click += applyChangesOrAddAnimalButton_Click;
             // 
             // AnimalCardForm
             // 

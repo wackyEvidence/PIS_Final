@@ -11,7 +11,12 @@ namespace Library.Registries
     public class AnimalsRegistry
     {
         private List<Filter> permissionManagerFilters;
-        public AnimalsRegistry(PermissionManager userPM) => permissionManagerFilters = userPM.GetAnimalsReadFilters;
+        public readonly bool CanChange; 
+        public AnimalsRegistry(PermissionManager userPM)
+        {
+            permissionManagerFilters = userPM.GetAnimalsReadFilters;
+            CanChange = userPM.CanChangeAnimalsRegistry;
+        }
 
         public List<Animal> GetAnimalsList(List<Filter> userFilters, Sort sort)
         {

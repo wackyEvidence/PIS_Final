@@ -7,7 +7,7 @@ using Library.Models;
 
 namespace Library.DBAdapters
 {
-    internal static class AnimalsDBAdapter
+    public static class AnimalsDBAdapter
     {
         public static readonly List<Dictionary<string, string>> animals = new List<Dictionary<string, string>>()
         {
@@ -15,8 +15,10 @@ namespace Library.DBAdapters
             {
                 { "Id", "1" },
                 { "RegCardNumber", "1234" },
-                { "Location", "0" },
-                { "Category", "1" },
+                { "Location", "Тюмень" },
+                { "Category", "Кот" },
+                //{ "Location", "0" },
+                //{ "Category", "1" },
                 { "Sex", "Мужской" },
                 { "BirthYear", "2015" }, 
                 { "ChipNumber", "567890123" },
@@ -30,8 +32,10 @@ namespace Library.DBAdapters
             {
                 { "Id", "2" },
                 { "RegCardNumber", "5678" },
-                { "Location", "1" },
-                { "Category", "0" },
+                { "Location", "Санкт-Петербург" },
+                { "Category", "Собака" },
+                //{ "Location", "1" },
+                //{ "Category", "0" },
                 { "Sex", "Женский" },
                 { "BirthYear", "2018" },
                 { "ChipNumber", "34567890" },
@@ -45,8 +49,10 @@ namespace Library.DBAdapters
             {
                 { "Id", "3" },
                 { "RegCardNumber", "9012" },
-                { "Location", "0" },
-                { "Category", "0" },
+                { "Location", "Тюмень" },
+                { "Category", "Собака" },
+                //{ "Location", "0" },
+                //{ "Category", "0" },
                 { "Sex", "Мужской" },
                 { "BirthYear", "2019" },
                 { "ChipNumber", "123456789" },
@@ -60,8 +66,10 @@ namespace Library.DBAdapters
             {
                 { "Id", "4" },
                 { "RegCardNumber", "2345" },
-                { "Location", "1" },
-                { "Category", "1" },
+                { "Location", "Санкт-Петербург" },
+                { "Category", "Кошка" },
+                //{ "Location", "1" },
+                //{ "Category", "1" },
                 { "Sex", "Женский" },
                 { "BirthYear", "2017" },
                 { "ChipNumber", "678901234" },
@@ -99,5 +107,7 @@ namespace Library.DBAdapters
             
             return filteredAnimals;
         }
+
+        public static void RemoveAt(int index) => animals.RemoveAt(index); 
     }
 }

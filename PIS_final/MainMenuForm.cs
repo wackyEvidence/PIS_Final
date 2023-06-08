@@ -23,9 +23,6 @@ namespace UI
             userNameLabel.Text = userName;
         }
 
-        private void MainMenuForm_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
-
-
         private void openAnimalsRegistryButton_Click(object sender, EventArgs e)
         {
             var animalsRegistryForm = new AnimalsRegistryForm();
