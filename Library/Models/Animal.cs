@@ -11,7 +11,8 @@ namespace Library.Models
     internal class Animal
     {
         public int Id { get; set; }
-        public Locality Location { get; set; }
+        public int RegCardNumber { get; set; }
+        public Location Location { get; set; }
         public AnimalCategory Category { get; set; }
         public char Sex { get; set; } 
         public int BirthYear { get; set; }

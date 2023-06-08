@@ -14,7 +14,6 @@ namespace Library
         public static bool AuthorizeUser(string login, string password)
         {
             var userData = UsersDBAdapter.GetUserData(login);
-            
             return userData["Password"] == password; 
         }
     }

@@ -9,15 +9,16 @@ namespace Library.Models
 {
     public class Organization
     {
-        public Organization(string fullName, string INN, string KPP, string regAddress, OrganizationType orgType, OrganizationalAttribute type, Locality location)
+        public Organization(Dictionary<string, string> organization)
         {
-            FullName = fullName;
-            this.INN = INN;
-            this.KPP = KPP;
-            RegistrationAddress = regAddress;
-            OrganizationPurpose = orgType;
-            Type = type; 
-            Location = location;
+            Id = int.Parse(organization["Id"]);
+            FullName = organization["FullName"]; 
+            INN = organization["INN"];
+            KPP = organization["KPP"];
+            RegistrationAddress = organization["RegistrationAddress"];
+            Type = (OrganizationType)int.Parse(organization["Type"]);
+            Attribute = (OrganizationalAttribute)int.Parse(organization["Attribute"]);
+            Location = (Location)int.Parse(organization["Location"]); 
         }
 
         public int Id { get; set; }
@@ -25,14 +26,8 @@ namespace Library.Models
         public string INN { get; set; }
         public string KPP { get; set; }
         public string RegistrationAddress { get; set; }
-        /// <summary>
-        /// Функциональное назначение  
-        /// </summary>
-        public OrganizationType OrganizationPurpose { get; set; }
-        /// <summary>
-        /// Признак организации: юридическое лицо или индивидуальный предприниматель 
-        /// </summary>
-        public OrganizationalAttribute Type { get; set; }
-        public Locality Location { get; set; }
+        public OrganizationType Type { get; set; } // тип организации
+        public OrganizationalAttribute Attribute { get; set; } // признак организации
+        public Location Location { get; set; }
     }
 }

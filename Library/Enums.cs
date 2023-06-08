@@ -1,5 +1,11 @@
 ﻿namespace Library
 {
+    public enum Location
+    {
+        Tyumen, 
+        SaintPetersburg
+    }
+
     public enum SortOrder
     {
         Ascending, 
@@ -32,8 +38,8 @@
 
     public enum OrganizationalAttribute
     { 
-        IndividualEntrepreneur, // ИП
-        LegalEntity // Юр. лицо 
+        IndividualEntrepreneur = 0, // ИП
+        LegalEntity = 1 // Юр. лицо 
     }
 
 
