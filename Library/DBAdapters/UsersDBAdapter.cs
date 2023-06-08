@@ -13,9 +13,9 @@ namespace Library.DBAdapters
         {
             return new List<User>()
             {
-                new User("Иванова", "Анна", "Петровна", UserRole.VetServiceCurator, "AnnaIvanova", "123456", null); 
+                new User("Иванова", "Анна", "Петровна", UserRole.VetServiceCurator, "AnnaIvanova", "123456", null)
 
-            }
+            };
         }
     }
 }
