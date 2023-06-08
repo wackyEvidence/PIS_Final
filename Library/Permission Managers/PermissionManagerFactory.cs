@@ -22,11 +22,11 @@ namespace Library
             else if (user.Role == UserRole.AnimalShelterSignatory || user.Role == UserRole.TrappingSignatory)
                 return new SignatoryPermissionManager(user);
             else if (user.Role == UserRole.VetServiceSignatory || user.Role == UserRole.VetServiceCurator)
-                return new VetServicePermissionManager(user);
+                return new VetServicePermissionManager();
             else if (user.Role == UserRole.TrappingOperator)
-                return new TrappingOperatorPermissionManager(user);
+                return new TrappingOperatorPermissionManager();
             else if (user.Role == UserRole.VetServiceOperator)
-                return new VetServiceOperatorPermissionManager(user);
+                return new VetServiceOperatorPermissionManager();
             else
                 return new CuratorPermissionManager(user); 
         }

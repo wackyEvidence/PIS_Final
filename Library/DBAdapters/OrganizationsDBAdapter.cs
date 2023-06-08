@@ -24,7 +24,7 @@ namespace Library.DBAdapters
             new Organization("Организация по транспортировке животных \"Зооэксперт\"", "1357911133", "6172636467", "г. Санкт-Петербург, ул. Гагарина, д. 25", OrganizationType.AnimalTransportationOrganization, OrganizationalAttribute.LegalEntity, new Locality("Санкт-Петербург"))
         };
 
-        private static List<Dictionary<string, string>> organizations = new List<Dictionary<string, string>>()
+        public static readonly List<Dictionary<string, string>> organizations = new List<Dictionary<string, string>>()
         {
             new Dictionary<string, string>
             {
@@ -73,7 +73,7 @@ namespace Library.DBAdapters
             new Dictionary<string, string>
             {
                 { "Id", "5" },
-                { "FullName",  "Местное самоуправление муниципального района" },
+                { "FullName",  "Местное самоуправление  муниципального района" },
                 { "INN", "8901234567" },
                 { "KPP", "7654321098" },
                 { "RegistrationAddress", "г. Тюмень, ул. Советская, д. 20" },
@@ -105,7 +105,28 @@ namespace Library.DBAdapters
             }
         };
 
-        public static List<Dictionary<string, string>> GetOrganizationsList(Filter filter, Sort sort) => organizations;
+        public static List<Dictionary<string, string>> GetOrganizationsList(List<Filter> filters, Sort sort)
+        {
+            var filteredOrganizations = new List<Dictionary<string, string>>();
+
+            foreach(var filter in filters)
+            {
+                if (filter.Value == "All")
+                    continue;
+                else if (filter.Value == "None")
+                    return new List<Dictionary<string, string>>(); 
+                else
+                    filteredOrganizations = organizations.Where(organization => organization[filter.Field] == filter.Value).ToList();
+            }
+
+            if (sort.Type == SortOrder.Ascending)
+                filteredOrganizations = filteredOrganizations.OrderBy(organization => organization[sort.Field]).ToList();
+            else if(sort.Type == SortOrder.Descending)
+                filteredOrganizations = filteredOrganizations.OrderByDescending(organization => organization[sort.Field]).ToList();
+
+            return filteredOrganizations; 
+        }
+
         public static Dictionary<string, string> GetById(int index) => organizations.Where(organization => organization["Id"] == index.ToString()).ToList()[0]; 
     }
 }

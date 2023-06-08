@@ -39,17 +39,17 @@
 
     public enum OrganizationType
     {
-        ExecutiveBranchOfStatePower, // исполнительный орган государственной власти 
-        Council, // орган местного самоуправления 
-        AnimalShelter, // приют
-        AnimalTrappingOrganization, // организация по отлову 
-        AnimalTrappingAndShelteringOrganization, // организация по отлову и приют 
-        AnimalTransportationOrganization, // организация по транспортировке
-        StateVetClinic, // государственная ветеринарная клиника 
-        MunicipalVetClinic, // муниципальная ветеринарная клиника
-        PrivateVetClinic, // частная ветеринарная клиника 
-        CharitableFoundation, // благотворительный фонд
-        OrganizationsForSalingGoodsAndServicesForAnimals, // организации по продаже товаров и предоставлению услуг для животных
-        Applicant // заявитель (для регистрации представителя юридического лица, подающего заявку на отлов) 
+        ExecutiveBranchOfStatePower = 0, // исполнительный орган государственной власти 
+        Council = 1, // орган местного самоуправления 
+        AnimalShelter = 2, // приют
+        AnimalTrappingOrganization = 3, // организация по отлову 
+        AnimalTrappingAndShelteringOrganization = 4, // организация по отлову и приют 
+        AnimalTransportationOrganization = 5, // организация по транспортировке
+        StateVetClinic = 6, // государственная ветеринарная клиника 
+        MunicipalVetClinic = 7, // муниципальная ветеринарная клиника
+        PrivateVetClinic = 8, // частная ветеринарная клиника 
+        CharitableFoundation = 9, // благотворительный фонд
+        OrganizationsForSalingGoodsAndServicesForAnimals = 10, // организации по продаже товаров и предоставлению услуг для животных
+        Applicant = 11 // заявитель (для регистрации представителя юридического лица, подающего заявку на отлов) 
     }
 }
