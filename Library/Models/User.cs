@@ -9,16 +9,16 @@ namespace Library.Models
 {
     public class User
     {
-        public User(string lastName, string firstName, string patronymic, int roleId, string login, string password, int organizationId)
+        public User(Dictionary<string, string> user)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Patronymic = patronymic;
-            Role = (UserRole) roleId;
-            Login = login;
-            Password = password;
-            Workplace = OrganizationsDBAdapter.GetById(organizationId);
-            // db = new List<Dictionary<string, string>>();
+            Id = int.Parse(user["Id"]); 
+            FirstName = user["FirstName"];
+            LastName = user["LastName"];
+            Patronymic = user["Patronymic"];
+            Role = (UserRole)int.Parse(user["Role"]);
+            Login = user["Login"];
+            Password = user["Password"]; 
+            Workplace = new Organization(OrganizationsDBAdapter.GetById(int.Parse(user["Workplace"])));
         }
 
         public int Id { get; set; }

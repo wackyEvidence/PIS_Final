@@ -85,14 +85,14 @@
             // 
             loginTextBox.Location = new Point(32, 64);
             loginTextBox.Name = "loginTextBox";
-            loginTextBox.Size = new Size(199, 43);
+            loginTextBox.Size = new Size(282, 43);
             loginTextBox.TabIndex = 4;
             // 
             // passwordTextBox
             // 
             passwordTextBox.Location = new Point(32, 162);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(199, 43);
+            passwordTextBox.Size = new Size(282, 43);
             passwordTextBox.TabIndex = 5;
             // 
             // authorizationGroupBox

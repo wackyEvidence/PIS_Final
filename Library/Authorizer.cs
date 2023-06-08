@@ -10,11 +10,18 @@ namespace Library
 {
     public static class Authorizer
     {
-        public static readonly User CurrentUser; 
+        public static User CurrentUser; 
         public static bool AuthorizeUser(string login, string password)
         {
             var userData = UsersDBAdapter.GetUserData(login);
-            return userData["Password"] == password; 
+
+            if(userData["Password"] == password)
+            {
+                CurrentUser = new User(userData);
+                return true; 
+            }
+            else
+                throw new Exception("Неправильный логин или пароль"); 
         }
     }
 }

@@ -36,6 +36,7 @@
             getReportButton = new Button();
             openContractsRegistryButton = new Button();
             openOrganizationsRegistryButton = new Button();
+            userNameLabel = new Label();
             mainMenuGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -100,6 +101,7 @@
             exitButton.TabIndex = 8;
             exitButton.Text = "Выход";
             exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // getReportButton
             // 
@@ -113,6 +115,7 @@
             getReportButton.TabIndex = 7;
             getReportButton.Text = "Генерация отчета";
             getReportButton.UseVisualStyleBackColor = true;
+            getReportButton.Click += getReportButton_Click;
             // 
             // openContractsRegistryButton
             // 
@@ -126,6 +129,7 @@
             openContractsRegistryButton.TabIndex = 6;
             openContractsRegistryButton.Text = "Открыть реестр контрактов";
             openContractsRegistryButton.UseVisualStyleBackColor = true;
+            openContractsRegistryButton.Click += openContractsRegistryButton_Click;
             // 
             // openOrganizationsRegistryButton
             // 
@@ -139,21 +143,33 @@
             openOrganizationsRegistryButton.TabIndex = 5;
             openOrganizationsRegistryButton.Text = "Открыть реестр организаций";
             openOrganizationsRegistryButton.UseVisualStyleBackColor = true;
+            openOrganizationsRegistryButton.Click += openOrganizationsRegistryButton_Click;
             // 
-            // MainMenu
+            // userNameLabel
+            // 
+            userNameLabel.AutoSize = true;
+            userNameLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            userNameLabel.Location = new Point(331, 104);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(218, 46);
+            userNameLabel.TabIndex = 4;
+            userNameLabel.Text = "<userName>";
+            // 
+            // MainMenuForm
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(588, 724);
+            Controls.Add(userNameLabel);
             Controls.Add(welcomeLabel);
             Controls.Add(mainMenuGroupBox);
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.FromArgb(53, 153, 255);
             Margin = new Padding(6);
-            Name = "MainMenu";
-            Text = "MainMenu";
+            Name = "MainMenuForm";
+            Text = "Главное меню";
             mainMenuGroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -169,5 +185,6 @@
         private Button openContractsRegistryButton;
         private Button openOrganizationsRegistryButton;
         private Button exitButton;
+        private Label userNameLabel;
     }
 }

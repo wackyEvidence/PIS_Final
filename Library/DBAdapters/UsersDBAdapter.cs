@@ -130,7 +130,7 @@ namespace Library.DBAdapters
                 if (user["Login"] == login)
                     return user; 
             }
-            throw new Exception("User not found!"); 
+            throw new Exception("Неправильный логин или пароль"); 
         }
     }
 }

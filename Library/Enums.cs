@@ -1,5 +1,14 @@
 ﻿namespace Library
 {
+    public enum OwnerSign
+    {
+        Collar = 0, // ошейник
+        Harness = 1, // шлейка
+        Clothes = 2, // одежда 
+        Chip = 3, // чип 
+        None = 4 
+    }
+
     public enum Location
     {
         Tyumen, 

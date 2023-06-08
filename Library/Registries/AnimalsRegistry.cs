@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Library.DBAdapters;
+using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,19 +11,17 @@ namespace Library.Registries
     internal class AnimalsRegistry
     {
         private List<Filter> permissionManagerFilters;
-        private List<Filter> userFilters;
-        private Sort userSort;
-        private PermissionManager userPM; 
+        public AnimalsRegistry(PermissionManager userPM) => permissionManagerFilters = userPM.GetAnimalsReadFilters;
 
-        public AnimalsRegistry(PermissionManager userPM) 
+        public List<Animal> GetAnimalsList(List<Filter> userFilters, Sort sort)
         {
-            this.userPM = userPM;
-            permissionManagerFilters = userPM.GetAnimalsReadFilters; 
-        }
+            var animalsList = new List<Animal>();
+            var animalsData = AnimalsDBAdapter.GetAnimalsList(permissionManagerFilters.Concat(userFilters).ToList(), sort); 
 
-        public void AddSort(Sort sort) => userSort = sort; 
-        public void AddFilters(List<Filter> filters) => userFilters = filters;
-            
-        public List<Filter> FinalFilter { get { return permissionManagerFilters.Concat(userFilters).ToList(); } } 
+            foreach(var entry in animalsData)
+                animalsList.Add(new Animal(entry)); 
+
+            return animalsList;
+        }
     }
 }
