@@ -1,5 +1,11 @@
 ﻿namespace Library
 {
+    public enum SortOrder
+    {
+        Ascending, 
+        Descending, 
+        None
+    }
     public enum AnimalCategory
     {
         Dog, 

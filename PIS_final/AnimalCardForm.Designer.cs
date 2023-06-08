@@ -98,7 +98,7 @@
             // animalPictureBox
             // 
             animalPictureBox.BackColor = Color.Gainsboro;
-            animalPictureBox.Location = new Point(554, 91);
+            animalPictureBox.Location = new Point(548, 91);
             animalPictureBox.Name = "animalPictureBox";
             animalPictureBox.Size = new Size(281, 361);
             animalPictureBox.TabIndex = 7;
@@ -239,6 +239,7 @@
             // 
             // checkedListBox1
             // 
+            checkedListBox1.ForeColor = SystemColors.MenuHighlight;
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Items.AddRange(new object[] { "Ошейник", "Шлейка", "Одежда", "Чип" });
             checkedListBox1.Location = new Point(349, 508);

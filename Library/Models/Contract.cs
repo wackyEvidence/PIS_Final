@@ -9,6 +9,7 @@ namespace Library.Models
     internal class Contract
     {
         public int Id { get; set; }
+        public int Number { get; set; }
         public DateTime SigningDate { get; set; }
         public DateTime ValidUntil { get; set; }
         public Organization Executor { get; set; }
