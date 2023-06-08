@@ -87,11 +87,16 @@ namespace Library.DBAdapters
                     filteredAnimals = animals.Where(animal => animal[filter.Field] == filter.Value).ToList();
             }
 
-            if (sort.Type == SortOrder.Ascending)
+            if (sort.Order == SortOrder.Ascending)
                 filteredAnimals = filteredAnimals.OrderBy(animal => animal[sort.Field]).ToList();
-            else if (sort.Type == SortOrder.Descending)
+            else if (sort.Order == SortOrder.Descending)
                 filteredAnimals = filteredAnimals.OrderByDescending(animal => animal[sort.Field]).ToList();
 
+            // Если нет фильтров, кроме разрешающих все, список отфильтрованных организаций останется пустым
+            // в этом случае нужно вернуть все содержащиеся в адаптере записи 
+            if (filteredAnimals.Count == 0)
+                return animals;
+            
             return filteredAnimals;
         }
     }

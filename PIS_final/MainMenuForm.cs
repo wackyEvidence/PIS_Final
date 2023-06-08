@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Library;
+using PIS_final;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,17 @@ namespace UI
 {
     public partial class MainMenuForm : Form
     {
-        public MainMenuForm(string userName)
+        public Form parentForm;
+
+        public MainMenuForm(Form parentForm, string userName)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
             userNameLabel.Text = userName;
         }
+
+        private void MainMenuForm_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
+
 
         private void openAnimalsRegistryButton_Click(object sender, EventArgs e)
         {
@@ -39,9 +47,16 @@ namespace UI
 
         }
 
+        private void changeUserButton_Click(object sender, EventArgs e)
+        {
+            Authorizer.CurrentUser = null;
+            parentForm.Show(); 
+            Close(); 
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

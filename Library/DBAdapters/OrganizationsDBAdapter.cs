@@ -114,16 +114,22 @@ namespace Library.DBAdapters
                 if (filter.Value == "All")
                     continue;
                 else if (filter.Value == "None")
-                    return new List<Dictionary<string, string>>(); 
+                    return new List<Dictionary<string, string>>();
                 else
                     filteredOrganizations = organizations.Where(organization => organization[filter.Field] == filter.Value).ToList();
             }
 
-            if (sort.Type == SortOrder.Ascending)
+            if (sort.Order == SortOrder.Ascending)
                 filteredOrganizations = filteredOrganizations.OrderBy(organization => organization[sort.Field]).ToList();
-            else if(sort.Type == SortOrder.Descending)
+            else if(sort.Order == SortOrder.Descending)
                 filteredOrganizations = filteredOrganizations.OrderByDescending(organization => organization[sort.Field]).ToList();
 
+            // Если нет фильтров, кроме разрешающих все, список отфильтрованных организаций останется пустым
+            // в этом случае нужно вернуть все содержащиеся в адаптере записи 
+            if(filteredOrganizations.Count == 0)
+            {
+                return organizations; 
+            }
             return filteredOrganizations; 
         }
 

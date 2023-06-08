@@ -7,14 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library; 
 
 namespace UI
 {
     public partial class AnimalCardForm : Form
     {
-        public AnimalCardForm()
+        private FormMode mode; 
+        public AnimalCardForm(FormMode formMode)
         {
             InitializeComponent();
+            mode = formMode;
+            if(formMode == FormMode.Adding)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void editAnimalCardButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

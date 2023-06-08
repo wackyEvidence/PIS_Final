@@ -30,27 +30,27 @@
         {
             headerLabel = new Label();
             animalNicknameLabel = new Label();
-            loginLabel = new Label();
-            loginTextBox = new TextBox();
+            regCardNumberValueLabel = new Label();
+            regCardNumberTextBox = new TextBox();
             animalPictureBox = new PictureBox();
-            label1 = new Label();
-            sortAttributeComboBox = new ComboBox();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
-            comboBox2 = new ComboBox();
-            label3 = new Label();
-            label4 = new Label();
-            textBox1 = new TextBox();
-            label5 = new Label();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            textBox3 = new TextBox();
-            label7 = new Label();
-            richTextBox1 = new RichTextBox();
-            label8 = new Label();
-            checkedListBox1 = new CheckedListBox();
-            authorizeButton = new Button();
-            button1 = new Button();
+            locationValueLabel = new Label();
+            locationComboBox = new ComboBox();
+            animalCategoryComboBox = new ComboBox();
+            animalCategoryValueLabel = new Label();
+            animalSexComboBox = new ComboBox();
+            animalSexValueLabel = new Label();
+            animalBirthYearValueLabel = new Label();
+            animalBirthYearTextBox = new TextBox();
+            animalChipNumberValueLabel = new Label();
+            animalChipNumberTextBox = new TextBox();
+            animalNicknameValueLabel = new Label();
+            animalNicknameTextBox = new TextBox();
+            distinguishingMarksValueLabel = new Label();
+            distinguishingMarksRichTextBox = new RichTextBox();
+            ownerSignsValueLabel = new Label();
+            ownerSignsCheckedListBox = new CheckedListBox();
+            editAnimalCardButton = new Button();
+            applyChangesOrAddAnimalButton = new Button();
             ((System.ComponentModel.ISupportInitialize)animalPictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -78,22 +78,22 @@
             animalNicknameLabel.TabIndex = 4;
             animalNicknameLabel.Text = "<none>";
             // 
-            // loginLabel
+            // regCardNumberValueLabel
             // 
-            loginLabel.AutoSize = true;
-            loginLabel.ForeColor = Color.FromArgb(53, 153, 255);
-            loginLabel.Location = new Point(5, 96);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(359, 38);
-            loginLabel.TabIndex = 5;
-            loginLabel.Text = "Регистрационный номер:  ";
+            regCardNumberValueLabel.AutoSize = true;
+            regCardNumberValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            regCardNumberValueLabel.Location = new Point(5, 96);
+            regCardNumberValueLabel.Name = "regCardNumberValueLabel";
+            regCardNumberValueLabel.Size = new Size(359, 38);
+            regCardNumberValueLabel.TabIndex = 5;
+            regCardNumberValueLabel.Text = "Регистрационный номер:  ";
             // 
-            // loginTextBox
+            // regCardNumberTextBox
             // 
-            loginTextBox.Location = new Point(349, 91);
-            loginTextBox.Name = "loginTextBox";
-            loginTextBox.Size = new Size(150, 43);
-            loginTextBox.TabIndex = 6;
+            regCardNumberTextBox.Location = new Point(349, 91);
+            regCardNumberTextBox.Name = "regCardNumberTextBox";
+            regCardNumberTextBox.Size = new Size(150, 43);
+            regCardNumberTextBox.TabIndex = 6;
             // 
             // animalPictureBox
             // 
@@ -104,168 +104,169 @@
             animalPictureBox.TabIndex = 7;
             animalPictureBox.TabStop = false;
             // 
-            // label1
+            // locationValueLabel
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.FromArgb(53, 153, 255);
-            label1.Location = new Point(6, 148);
-            label1.Name = "label1";
-            label1.Size = new Size(278, 38);
-            label1.TabIndex = 8;
-            label1.Text = "Населенный пункт:  ";
+            locationValueLabel.AutoSize = true;
+            locationValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            locationValueLabel.Location = new Point(6, 148);
+            locationValueLabel.Name = "locationValueLabel";
+            locationValueLabel.Size = new Size(278, 38);
+            locationValueLabel.TabIndex = 8;
+            locationValueLabel.Text = "Населенный пункт:  ";
             // 
-            // sortAttributeComboBox
+            // locationComboBox
             // 
-            sortAttributeComboBox.FormattingEnabled = true;
-            sortAttributeComboBox.Location = new Point(266, 141);
-            sortAttributeComboBox.Name = "sortAttributeComboBox";
-            sortAttributeComboBox.Size = new Size(233, 45);
-            sortAttributeComboBox.TabIndex = 13;
+            locationComboBox.FormattingEnabled = true;
+            locationComboBox.Location = new Point(266, 141);
+            locationComboBox.Name = "locationComboBox";
+            locationComboBox.Size = new Size(233, 45);
+            locationComboBox.TabIndex = 13;
             // 
-            // comboBox1
+            // animalCategoryComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(298, 196);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(201, 45);
-            comboBox1.TabIndex = 15;
+            animalCategoryComboBox.FormattingEnabled = true;
+            animalCategoryComboBox.Location = new Point(298, 196);
+            animalCategoryComboBox.Name = "animalCategoryComboBox";
+            animalCategoryComboBox.Size = new Size(201, 45);
+            animalCategoryComboBox.TabIndex = 15;
             // 
-            // label2
+            // animalCategoryValueLabel
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.FromArgb(53, 153, 255);
-            label2.Location = new Point(6, 203);
-            label2.Name = "label2";
-            label2.Size = new Size(314, 38);
-            label2.TabIndex = 14;
-            label2.Text = "Категория животного:  ";
+            animalCategoryValueLabel.AutoSize = true;
+            animalCategoryValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            animalCategoryValueLabel.Location = new Point(6, 203);
+            animalCategoryValueLabel.Name = "animalCategoryValueLabel";
+            animalCategoryValueLabel.Size = new Size(314, 38);
+            animalCategoryValueLabel.TabIndex = 14;
+            animalCategoryValueLabel.Text = "Категория животного:  ";
             // 
-            // comboBox2
+            // animalSexComboBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(227, 255);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(57, 45);
-            comboBox2.TabIndex = 17;
+            animalSexComboBox.FormattingEnabled = true;
+            animalSexComboBox.Location = new Point(227, 255);
+            animalSexComboBox.Name = "animalSexComboBox";
+            animalSexComboBox.Size = new Size(158, 45);
+            animalSexComboBox.TabIndex = 17;
             // 
-            // label3
+            // animalSexValueLabel
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.FromArgb(53, 153, 255);
-            label3.Location = new Point(6, 258);
-            label3.Name = "label3";
-            label3.Size = new Size(236, 38);
-            label3.TabIndex = 16;
-            label3.Text = "Пол животного:  ";
+            animalSexValueLabel.AutoSize = true;
+            animalSexValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            animalSexValueLabel.Location = new Point(6, 258);
+            animalSexValueLabel.Name = "animalSexValueLabel";
+            animalSexValueLabel.Size = new Size(236, 38);
+            animalSexValueLabel.TabIndex = 16;
+            animalSexValueLabel.Text = "Пол животного:  ";
             // 
-            // label4
+            // animalBirthYearValueLabel
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.FromArgb(53, 153, 255);
-            label4.Location = new Point(6, 313);
-            label4.Name = "label4";
-            label4.Size = new Size(220, 38);
-            label4.TabIndex = 18;
-            label4.Text = "Год рождения:  ";
+            animalBirthYearValueLabel.AutoSize = true;
+            animalBirthYearValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            animalBirthYearValueLabel.Location = new Point(6, 313);
+            animalBirthYearValueLabel.Name = "animalBirthYearValueLabel";
+            animalBirthYearValueLabel.Size = new Size(220, 38);
+            animalBirthYearValueLabel.TabIndex = 18;
+            animalBirthYearValueLabel.Text = "Год рождения:  ";
             // 
-            // textBox1
+            // animalBirthYearTextBox
             // 
-            textBox1.Location = new Point(217, 308);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(103, 43);
-            textBox1.TabIndex = 19;
+            animalBirthYearTextBox.Location = new Point(217, 308);
+            animalBirthYearTextBox.Name = "animalBirthYearTextBox";
+            animalBirthYearTextBox.Size = new Size(103, 43);
+            animalBirthYearTextBox.TabIndex = 19;
             // 
-            // label5
+            // animalChipNumberValueLabel
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.FromArgb(53, 153, 255);
-            label5.Location = new Point(6, 364);
-            label5.Name = "label5";
-            label5.Size = new Size(379, 38);
-            label5.TabIndex = 20;
-            label5.Text = "Номер электронного чипа:  ";
+            animalChipNumberValueLabel.AutoSize = true;
+            animalChipNumberValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            animalChipNumberValueLabel.Location = new Point(6, 364);
+            animalChipNumberValueLabel.Name = "animalChipNumberValueLabel";
+            animalChipNumberValueLabel.Size = new Size(379, 38);
+            animalChipNumberValueLabel.TabIndex = 20;
+            animalChipNumberValueLabel.Text = "Номер электронного чипа:  ";
             // 
-            // textBox2
+            // animalChipNumberTextBox
             // 
-            textBox2.Location = new Point(363, 359);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(136, 43);
-            textBox2.TabIndex = 21;
+            animalChipNumberTextBox.Location = new Point(363, 359);
+            animalChipNumberTextBox.Name = "animalChipNumberTextBox";
+            animalChipNumberTextBox.Size = new Size(136, 43);
+            animalChipNumberTextBox.TabIndex = 21;
             // 
-            // label6
+            // animalNicknameValueLabel
             // 
-            label6.AutoSize = true;
-            label6.ForeColor = Color.FromArgb(53, 153, 255);
-            label6.Location = new Point(6, 414);
-            label6.Name = "label6";
-            label6.Size = new Size(276, 38);
-            label6.TabIndex = 22;
-            label6.Text = "Кличка животного:  ";
+            animalNicknameValueLabel.AutoSize = true;
+            animalNicknameValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            animalNicknameValueLabel.Location = new Point(6, 414);
+            animalNicknameValueLabel.Name = "animalNicknameValueLabel";
+            animalNicknameValueLabel.Size = new Size(276, 38);
+            animalNicknameValueLabel.TabIndex = 22;
+            animalNicknameValueLabel.Text = "Кличка животного:  ";
             // 
-            // textBox3
+            // animalNicknameTextBox
             // 
-            textBox3.Location = new Point(266, 409);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(233, 43);
-            textBox3.TabIndex = 23;
+            animalNicknameTextBox.Location = new Point(266, 409);
+            animalNicknameTextBox.Name = "animalNicknameTextBox";
+            animalNicknameTextBox.Size = new Size(233, 43);
+            animalNicknameTextBox.TabIndex = 23;
             // 
-            // label7
+            // distinguishingMarksValueLabel
             // 
-            label7.AutoSize = true;
-            label7.ForeColor = Color.FromArgb(53, 153, 255);
-            label7.Location = new Point(8, 467);
-            label7.Name = "label7";
-            label7.Size = new Size(262, 38);
-            label7.TabIndex = 24;
-            label7.Text = "Особые приметы:  ";
+            distinguishingMarksValueLabel.AutoSize = true;
+            distinguishingMarksValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            distinguishingMarksValueLabel.Location = new Point(8, 467);
+            distinguishingMarksValueLabel.Name = "distinguishingMarksValueLabel";
+            distinguishingMarksValueLabel.Size = new Size(262, 38);
+            distinguishingMarksValueLabel.TabIndex = 24;
+            distinguishingMarksValueLabel.Text = "Особые приметы:  ";
             // 
-            // richTextBox1
+            // distinguishingMarksRichTextBox
             // 
-            richTextBox1.Location = new Point(17, 508);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(294, 156);
-            richTextBox1.TabIndex = 26;
-            richTextBox1.Text = "";
+            distinguishingMarksRichTextBox.Location = new Point(17, 508);
+            distinguishingMarksRichTextBox.Name = "distinguishingMarksRichTextBox";
+            distinguishingMarksRichTextBox.Size = new Size(294, 156);
+            distinguishingMarksRichTextBox.TabIndex = 26;
+            distinguishingMarksRichTextBox.Text = "";
             // 
-            // label8
+            // ownerSignsValueLabel
             // 
-            label8.AutoSize = true;
-            label8.ForeColor = Color.FromArgb(53, 153, 255);
-            label8.Location = new Point(349, 467);
-            label8.Name = "label8";
-            label8.Size = new Size(289, 38);
-            label8.TabIndex = 27;
-            label8.Text = "Призаки владельца:  ";
+            ownerSignsValueLabel.AutoSize = true;
+            ownerSignsValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
+            ownerSignsValueLabel.Location = new Point(349, 467);
+            ownerSignsValueLabel.Name = "ownerSignsValueLabel";
+            ownerSignsValueLabel.Size = new Size(289, 38);
+            ownerSignsValueLabel.TabIndex = 27;
+            ownerSignsValueLabel.Text = "Призаки владельца:  ";
             // 
-            // checkedListBox1
+            // ownerSignsCheckedListBox
             // 
-            checkedListBox1.ForeColor = SystemColors.MenuHighlight;
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Items.AddRange(new object[] { "Ошейник", "Шлейка", "Одежда", "Чип" });
-            checkedListBox1.Location = new Point(349, 508);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(306, 156);
-            checkedListBox1.TabIndex = 29;
+            ownerSignsCheckedListBox.ForeColor = SystemColors.MenuHighlight;
+            ownerSignsCheckedListBox.FormattingEnabled = true;
+            ownerSignsCheckedListBox.Items.AddRange(new object[] { "Ошейник", "Шлейка", "Одежда", "Чип" });
+            ownerSignsCheckedListBox.Location = new Point(349, 508);
+            ownerSignsCheckedListBox.Name = "ownerSignsCheckedListBox";
+            ownerSignsCheckedListBox.Size = new Size(306, 156);
+            ownerSignsCheckedListBox.TabIndex = 29;
             // 
-            // authorizeButton
+            // editAnimalCardButton
             // 
-            authorizeButton.ForeColor = Color.FromArgb(53, 153, 255);
-            authorizeButton.Location = new Point(17, 696);
-            authorizeButton.Name = "authorizeButton";
-            authorizeButton.Size = new Size(172, 100);
-            authorizeButton.TabIndex = 30;
-            authorizeButton.Text = "Изменить карточку";
-            authorizeButton.UseVisualStyleBackColor = true;
+            editAnimalCardButton.ForeColor = Color.FromArgb(53, 153, 255);
+            editAnimalCardButton.Location = new Point(17, 696);
+            editAnimalCardButton.Name = "editAnimalCardButton";
+            editAnimalCardButton.Size = new Size(172, 100);
+            editAnimalCardButton.TabIndex = 30;
+            editAnimalCardButton.Text = "Изменить карточку";
+            editAnimalCardButton.UseVisualStyleBackColor = true;
+            editAnimalCardButton.Click += editAnimalCardButton_Click;
             // 
-            // button1
+            // applyChangesOrAddAnimalButton
             // 
-            button1.ForeColor = Color.FromArgb(53, 153, 255);
-            button1.Location = new Point(609, 693);
-            button1.Name = "button1";
-            button1.Size = new Size(226, 100);
-            button1.TabIndex = 31;
-            button1.Text = "Сохранить изменения";
-            button1.UseVisualStyleBackColor = true;
+            applyChangesOrAddAnimalButton.ForeColor = Color.FromArgb(53, 153, 255);
+            applyChangesOrAddAnimalButton.Location = new Point(609, 693);
+            applyChangesOrAddAnimalButton.Name = "applyChangesOrAddAnimalButton";
+            applyChangesOrAddAnimalButton.Size = new Size(226, 100);
+            applyChangesOrAddAnimalButton.TabIndex = 31;
+            applyChangesOrAddAnimalButton.Text = "Сохранить изменения";
+            applyChangesOrAddAnimalButton.UseVisualStyleBackColor = true;
             // 
             // AnimalCardForm
             // 
@@ -273,27 +274,27 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(855, 808);
-            Controls.Add(button1);
-            Controls.Add(authorizeButton);
-            Controls.Add(checkedListBox1);
-            Controls.Add(label8);
-            Controls.Add(richTextBox1);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(textBox3);
-            Controls.Add(label5);
-            Controls.Add(textBox2);
-            Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(label2);
-            Controls.Add(sortAttributeComboBox);
-            Controls.Add(label1);
+            Controls.Add(applyChangesOrAddAnimalButton);
+            Controls.Add(editAnimalCardButton);
+            Controls.Add(ownerSignsCheckedListBox);
+            Controls.Add(ownerSignsValueLabel);
+            Controls.Add(distinguishingMarksRichTextBox);
+            Controls.Add(distinguishingMarksValueLabel);
+            Controls.Add(animalNicknameValueLabel);
+            Controls.Add(animalNicknameTextBox);
+            Controls.Add(animalChipNumberValueLabel);
+            Controls.Add(animalChipNumberTextBox);
+            Controls.Add(animalBirthYearValueLabel);
+            Controls.Add(animalBirthYearTextBox);
+            Controls.Add(animalSexComboBox);
+            Controls.Add(animalSexValueLabel);
+            Controls.Add(animalCategoryComboBox);
+            Controls.Add(animalCategoryValueLabel);
+            Controls.Add(locationComboBox);
+            Controls.Add(locationValueLabel);
             Controls.Add(animalPictureBox);
-            Controls.Add(loginLabel);
-            Controls.Add(loginTextBox);
+            Controls.Add(regCardNumberValueLabel);
+            Controls.Add(regCardNumberTextBox);
             Controls.Add(animalNicknameLabel);
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -309,26 +310,26 @@
 
         private Label headerLabel;
         private Label animalNicknameLabel;
-        private Label loginLabel;
-        private TextBox loginTextBox;
+        private Label regCardNumberValueLabel;
+        private TextBox regCardNumberTextBox;
         private PictureBox animalPictureBox;
-        private Label label1;
-        private ComboBox sortAttributeComboBox;
-        private ComboBox comboBox1;
-        private Label label2;
-        private ComboBox comboBox2;
-        private Label label3;
-        private Label label4;
-        private TextBox textBox1;
-        private Label label5;
-        private TextBox textBox2;
-        private Label label6;
-        private TextBox textBox3;
-        private Label label7;
-        private RichTextBox richTextBox1;
-        private Label label8;
-        private CheckedListBox checkedListBox1;
-        private Button authorizeButton;
-        private Button button1;
+        private Label locationValueLabel;
+        private ComboBox locationComboBox;
+        private ComboBox animalCategoryComboBox;
+        private Label animalCategoryValueLabel;
+        private ComboBox animalSexComboBox;
+        private Label animalSexValueLabel;
+        private Label animalBirthYearValueLabel;
+        private TextBox animalBirthYearTextBox;
+        private Label animalChipNumberValueLabel;
+        private TextBox animalChipNumberTextBox;
+        private Label animalNicknameValueLabel;
+        private TextBox animalNicknameTextBox;
+        private Label distinguishingMarksValueLabel;
+        private RichTextBox distinguishingMarksRichTextBox;
+        private Label ownerSignsValueLabel;
+        private CheckedListBox ownerSignsCheckedListBox;
+        private Button editAnimalCardButton;
+        private Button applyChangesOrAddAnimalButton;
     }
 }

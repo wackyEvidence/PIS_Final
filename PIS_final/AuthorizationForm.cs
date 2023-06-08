@@ -1,14 +1,20 @@
 using UI;
 using Library;
+using System.Runtime.CompilerServices;
 
 namespace PIS_final
 {
     public partial class AuthorizationForm : Form
     {
+        private TextBox _loginTextBox; 
+        private TextBox _passwordTextBox;
+
         public AuthorizationForm()
         {
             InitializeComponent();
-            passwordTextBox.PasswordChar = '*'; 
+            passwordTextBox.PasswordChar = '*';
+            _loginTextBox = loginTextBox; 
+            _passwordTextBox = passwordTextBox;
         }
 
         private void authorizeButton_Click(object sender, EventArgs e)
@@ -19,7 +25,9 @@ namespace PIS_final
             {
                 if (Authorizer.AuthorizeUser(userLogin, userPassword))
                 {
-                    var menu = new MainMenuForm(Authorizer.CurrentUser.FirstName);
+                    var menu = new MainMenuForm(this, Authorizer.CurrentUser.FirstName);
+                    this.Hide(); // прячем форму авторизации
+                    this.ClearTextBoxes(); 
                     menu.Show();
                 }
             }
@@ -27,6 +35,12 @@ namespace PIS_final
             {
                 MessageBox.Show($"Пожалуйста, проверьте введенные логин и пароль", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ClearTextBoxes()
+        {
+            _loginTextBox.Text = string.Empty; 
+            _passwordTextBox.Text = string.Empty;   
         }
     }
 }

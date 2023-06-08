@@ -1,5 +1,11 @@
 ﻿namespace Library
 {
+    public enum FormMode
+    {
+        Adding, 
+        Editing 
+    }
+
     public enum OwnerSign
     {
         Collar = 0, // ошейник

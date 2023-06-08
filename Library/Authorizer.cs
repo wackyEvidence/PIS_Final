@@ -18,6 +18,7 @@ namespace Library
             if(userData["Password"] == password)
             {
                 CurrentUser = new User(userData);
+                CurrentUser.PermissionManager = PermissionManagerFactory.GetPermissionManager(CurrentUser); 
                 return true; 
             }
             else

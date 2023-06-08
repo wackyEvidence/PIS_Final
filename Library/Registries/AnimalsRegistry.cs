@@ -16,7 +16,9 @@ namespace Library.Registries
         public List<Animal> GetAnimalsList(List<Filter> userFilters, Sort sort)
         {
             var animalsList = new List<Animal>();
-            var animalsData = AnimalsDBAdapter.GetAnimalsList(permissionManagerFilters.Concat(userFilters).ToList(), sort); 
+            var finalFilter = permissionManagerFilters.Concat(userFilters).ToList();
+
+            var animalsData = AnimalsDBAdapter.GetAnimalsList(finalFilter, sort); 
 
             foreach(var entry in animalsData)
                 animalsList.Add(new Animal(entry)); 

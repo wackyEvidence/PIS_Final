@@ -14,11 +14,18 @@ namespace UI
 {
     public partial class AnimalsRegistryForm : Form
     {
-        private AnimalsRegistry animalsRegistry;
+        private AnimalsRegistry animalsRegistry; 
+        private List<Filter> userFilters = new List<Filter>();
+
         public AnimalsRegistryForm()
         {
             InitializeComponent();
             animalsRegistry = new AnimalsRegistry(Authorizer.CurrentUser.PermissionManager);
+            dataGridView1.DataSource = animalsRegistry.GetAnimalsList(new List<Filter>(), new Sort("None", Library.SortOrder.None));
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
+
         }
 
         private void addAnimalRecordButton_Click(object sender, EventArgs e)

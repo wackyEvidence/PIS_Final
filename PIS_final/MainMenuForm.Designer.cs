@@ -32,6 +32,7 @@
             openAnimalsRegistryButton = new Button();
             welcomeLabel = new Label();
             mainMenuGroupBox = new GroupBox();
+            changeUserButton = new Button();
             exitButton = new Button();
             getReportButton = new Button();
             openContractsRegistryButton = new Button();
@@ -78,6 +79,7 @@
             // 
             // mainMenuGroupBox
             // 
+            mainMenuGroupBox.Controls.Add(changeUserButton);
             mainMenuGroupBox.Controls.Add(exitButton);
             mainMenuGroupBox.Controls.Add(getReportButton);
             mainMenuGroupBox.Controls.Add(openContractsRegistryButton);
@@ -85,9 +87,23 @@
             mainMenuGroupBox.Controls.Add(openAnimalsRegistryButton);
             mainMenuGroupBox.Location = new Point(126, 164);
             mainMenuGroupBox.Name = "mainMenuGroupBox";
-            mainMenuGroupBox.Size = new Size(309, 528);
+            mainMenuGroupBox.Size = new Size(309, 624);
             mainMenuGroupBox.TabIndex = 2;
             mainMenuGroupBox.TabStop = false;
+            // 
+            // changeUserButton
+            // 
+            changeUserButton.FlatAppearance.BorderColor = Color.Silver;
+            changeUserButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
+            changeUserButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
+            changeUserButton.FlatStyle = FlatStyle.Flat;
+            changeUserButton.Location = new Point(6, 426);
+            changeUserButton.Name = "changeUserButton";
+            changeUserButton.Size = new Size(295, 88);
+            changeUserButton.TabIndex = 9;
+            changeUserButton.Text = "Сменить пользователя";
+            changeUserButton.UseVisualStyleBackColor = true;
+            changeUserButton.Click += changeUserButton_Click;
             // 
             // exitButton
             // 
@@ -95,7 +111,7 @@
             exitButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
             exitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
             exitButton.FlatStyle = FlatStyle.Flat;
-            exitButton.Location = new Point(6, 426);
+            exitButton.Location = new Point(6, 526);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(295, 88);
             exitButton.TabIndex = 8;
@@ -160,7 +176,7 @@
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(588, 724);
+            ClientSize = new Size(588, 795);
             Controls.Add(userNameLabel);
             Controls.Add(welcomeLabel);
             Controls.Add(mainMenuGroupBox);
@@ -170,6 +186,7 @@
             Margin = new Padding(6);
             Name = "MainMenuForm";
             Text = "Главное меню";
+            FormClosed += MainMenuForm_FormClosed;
             mainMenuGroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -186,5 +203,6 @@
         private Button openOrganizationsRegistryButton;
         private Button exitButton;
         private Label userNameLabel;
+        private Button changeUserButton;
     }
 }
