@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.DBAdapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,15 @@ namespace Library.Models
 {
     public class User
     {
-        public User(string lastName, string firstName, string patronymic, UserRole role, string login, string password, Organization organization)
+        public User(string lastName, string firstName, string patronymic, int roleId, string login, string password, int organizationId)
         {
             FirstName = firstName;
             LastName = lastName;
             Patronymic = patronymic;
-            Role = role;
+            Role = (UserRole) roleId;
             Login = login;
             Password = password;
-            Workplace = organization; 
+            Workplace = OrganizationsDBAdapter.GetById(organizationId);
             // db = new List<Dictionary<string, string>>();
         }
 

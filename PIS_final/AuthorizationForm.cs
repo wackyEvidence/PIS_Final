@@ -1,4 +1,5 @@
 using UI;
+using Library; 
 
 namespace PIS_final
 {
@@ -11,8 +12,14 @@ namespace PIS_final
 
         private void authorizeButton_Click(object sender, EventArgs e)
         {
-            var menu = new MainMenuForm();
-            menu.Show();
+            var userLogin = loginTextBox.Text; 
+            var userPassword = passwordTextBox.Text;    
+            if(Authorizer.AuthorizeUser(userLogin, userPassword))
+            {
+                var menu = new MainMenuForm();
+                menu.Show();
+            }
+            
         }
     }
 }

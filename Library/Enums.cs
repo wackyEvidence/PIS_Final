@@ -14,20 +14,20 @@
     
     public enum UserRole
     {
-        VetServiceCurator, // куратор вет. службы 
-        TrappingCurator, // куратор по отлову
-        AnimalShelterCurator, // куратор приюта 
-        VetServiceOperator, // оператор вет службы
-        TrappingOperator, // оператор по отлову 
-        VetServiceSignatory, // подписант вет. службы 
-        TrappingSignatory, // подписант по отлову
-        AnimalShelterSignatory, // подписант приюта 
-        OMSU_Curator, // куратор ОМСУ, 
-        OMSU_Signatory, // подписант ОМСУ
-        OMSU_Operator, // оператор ОМСУ
-        AnimalShelterOperator, // оператор приюта 
-        Veterinarian, // ветврач
-        AnimalShelterVeterinarian // ветврач приюта
+        VetServiceCurator = 0, // куратор вет. службы     // ДОБАВЛЕНО 
+        TrappingCurator = 1, // куратор по отлову
+        AnimalShelterCurator = 2, // куратор приюта       // ДОБАВЛЕНО 
+        VetServiceOperator = 3, // оператор вет службы    // ДОБАВЛЕНО
+        TrappingOperator = 4, // оператор по отлову       // ДОБАВЛЕНО
+        VetServiceSignatory = 5, // подписант вет. службы // ДОБАВЛЕНО
+        TrappingSignatory = 6, // подписант по отлову     // ДОБАВЛЕНО
+        AnimalShelterSignatory = 7, // подписант приюта 
+        OMSU_Curator = 8, // куратор ОМСУ,                // ДОБАВЛЕНО
+        OMSU_Signatory = 9, // подписант ОМСУ
+        OMSU_Operator = 10, // оператор ОМСУ              // ДОБАВЛЕНО
+        AnimalShelterOperator = 11, // оператор приюта    // ДОБАВЛЕНО 
+        Veterinarian = 12, // ветврач                     // ДОБАВЛЕНО 
+        AnimalShelterVeterinarian = 13 // ветврач приюта
     }
 
     public enum OrganizationalAttribute
