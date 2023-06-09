@@ -186,6 +186,7 @@
             Margin = new Padding(6);
             Name = "MainMenuForm";
             Text = "Главное меню";
+            FormClosing += MainMenuForm_FormClosing;
             mainMenuGroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

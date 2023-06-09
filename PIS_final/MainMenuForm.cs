@@ -47,13 +47,19 @@ namespace UI
         private void changeUserButton_Click(object sender, EventArgs e)
         {
             Authorizer.CurrentUser = null;
-            parentForm.Show(); 
-            Close(); 
+            parentForm.Show();
+            Close();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (parentForm.Visible == false)
+                Application.Exit();
         }
     }
 }

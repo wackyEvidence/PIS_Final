@@ -9,7 +9,9 @@ namespace Library.DBAdapters
 {
     public static class AnimalsDBAdapter
     {
-        public static readonly List<Dictionary<string, string>> animals = new List<Dictionary<string, string>>()
+        private static int lastId; 
+
+        private static List<Dictionary<string, string>> animals = new List<Dictionary<string, string>>()
         {
             new Dictionary<string, string>()
             {
@@ -108,6 +110,9 @@ namespace Library.DBAdapters
             return filteredAnimals;
         }
 
+
+        public static int GetLastId => lastId;
+        public static void Add(Dictionary<string, string> animalInfo) => animals.Add(animalInfo); 
         public static void RemoveAt(int index) => animals.RemoveAt(index); 
     }
 }

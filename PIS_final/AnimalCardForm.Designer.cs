@@ -84,13 +84,13 @@
             regCardNumberValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
             regCardNumberValueLabel.Location = new Point(5, 96);
             regCardNumberValueLabel.Name = "regCardNumberValueLabel";
-            regCardNumberValueLabel.Size = new Size(359, 38);
+            regCardNumberValueLabel.Size = new Size(343, 38);
             regCardNumberValueLabel.TabIndex = 5;
-            regCardNumberValueLabel.Text = "Регистрационный номер:  ";
+            regCardNumberValueLabel.Text = "Регистрационный номер:";
             // 
             // regCardNumberTextBox
             // 
-            regCardNumberTextBox.Location = new Point(349, 91);
+            regCardNumberTextBox.Location = new Point(349, 93);
             regCardNumberTextBox.Name = "regCardNumberTextBox";
             regCardNumberTextBox.Size = new Size(150, 43);
             regCardNumberTextBox.TabIndex = 6;
@@ -117,6 +117,7 @@
             // locationComboBox
             // 
             locationComboBox.FormattingEnabled = true;
+            locationComboBox.Items.AddRange(new object[] { "Тюмень", "Санкт-Петербург" });
             locationComboBox.Location = new Point(266, 141);
             locationComboBox.Name = "locationComboBox";
             locationComboBox.Size = new Size(233, 45);
@@ -125,6 +126,7 @@
             // animalCategoryComboBox
             // 
             animalCategoryComboBox.FormattingEnabled = true;
+            animalCategoryComboBox.Items.AddRange(new object[] { "Кот", "Собака" });
             animalCategoryComboBox.Location = new Point(298, 196);
             animalCategoryComboBox.Name = "animalCategoryComboBox";
             animalCategoryComboBox.Size = new Size(201, 45);
@@ -143,6 +145,7 @@
             // animalSexComboBox
             // 
             animalSexComboBox.FormattingEnabled = true;
+            animalSexComboBox.Items.AddRange(new object[] { "Мужской", "Женский" });
             animalSexComboBox.Location = new Point(227, 255);
             animalSexComboBox.Name = "animalSexComboBox";
             animalSexComboBox.Size = new Size(158, 45);
@@ -164,13 +167,13 @@
             animalBirthYearValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
             animalBirthYearValueLabel.Location = new Point(6, 313);
             animalBirthYearValueLabel.Name = "animalBirthYearValueLabel";
-            animalBirthYearValueLabel.Size = new Size(220, 38);
+            animalBirthYearValueLabel.Size = new Size(204, 38);
             animalBirthYearValueLabel.TabIndex = 18;
-            animalBirthYearValueLabel.Text = "Год рождения:  ";
+            animalBirthYearValueLabel.Text = "Год рождения:";
             // 
             // animalBirthYearTextBox
             // 
-            animalBirthYearTextBox.Location = new Point(217, 308);
+            animalBirthYearTextBox.Location = new Point(216, 310);
             animalBirthYearTextBox.Name = "animalBirthYearTextBox";
             animalBirthYearTextBox.Size = new Size(103, 43);
             animalBirthYearTextBox.TabIndex = 19;
@@ -181,13 +184,13 @@
             animalChipNumberValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
             animalChipNumberValueLabel.Location = new Point(6, 364);
             animalChipNumberValueLabel.Name = "animalChipNumberValueLabel";
-            animalChipNumberValueLabel.Size = new Size(379, 38);
+            animalChipNumberValueLabel.Size = new Size(363, 38);
             animalChipNumberValueLabel.TabIndex = 20;
-            animalChipNumberValueLabel.Text = "Номер электронного чипа:  ";
+            animalChipNumberValueLabel.Text = "Номер электронного чипа:";
             // 
             // animalChipNumberTextBox
             // 
-            animalChipNumberTextBox.Location = new Point(363, 359);
+            animalChipNumberTextBox.Location = new Point(375, 361);
             animalChipNumberTextBox.Name = "animalChipNumberTextBox";
             animalChipNumberTextBox.Size = new Size(136, 43);
             animalChipNumberTextBox.TabIndex = 21;
@@ -198,13 +201,13 @@
             animalNicknameValueLabel.ForeColor = Color.FromArgb(53, 153, 255);
             animalNicknameValueLabel.Location = new Point(6, 414);
             animalNicknameValueLabel.Name = "animalNicknameValueLabel";
-            animalNicknameValueLabel.Size = new Size(276, 38);
+            animalNicknameValueLabel.Size = new Size(260, 38);
             animalNicknameValueLabel.TabIndex = 22;
-            animalNicknameValueLabel.Text = "Кличка животного:  ";
+            animalNicknameValueLabel.Text = "Кличка животного:";
             // 
             // animalNicknameTextBox
             // 
-            animalNicknameTextBox.Location = new Point(266, 409);
+            animalNicknameTextBox.Location = new Point(272, 409);
             animalNicknameTextBox.Name = "animalNicknameTextBox";
             animalNicknameTextBox.Size = new Size(233, 43);
             animalNicknameTextBox.TabIndex = 23;

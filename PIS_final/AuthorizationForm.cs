@@ -15,8 +15,8 @@ namespace PIS_final
             passwordTextBox.PasswordChar = '*';
             _loginTextBox = loginTextBox; 
             _passwordTextBox = passwordTextBox;
-            loginTextBox.Text = "AnnaIvanova";
-            passwordTextBox.Text = "123456"; 
+            loginTextBox.Text = "IgorPetrov";
+            passwordTextBox.Text = "qwerty"; 
         }
 
         private void authorizeButton_Click(object sender, EventArgs e)

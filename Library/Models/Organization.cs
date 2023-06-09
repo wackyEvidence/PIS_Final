@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,8 @@ namespace Library.Models
             RegistrationAddress = organization["RegistrationAddress"];
             Type = (OrganizationType)int.Parse(organization["Type"]);
             Attribute = (OrganizationalAttribute)int.Parse(organization["Attribute"]);
-            Location = (Location)int.Parse(organization["Location"]); 
+            //Location = (Location)int.Parse(organization["Location"]); 
+            Location = organization["Location"]; 
         }
 
         public int Id { get; set; }
@@ -28,6 +30,7 @@ namespace Library.Models
         public string RegistrationAddress { get; set; }
         public OrganizationType Type { get; set; } // тип организации
         public OrganizationalAttribute Attribute { get; set; } // признак организации
-        public Location Location { get; set; }
+        //public Location Location { get; set; }
+        public string Location { get; set; }
     }
 }

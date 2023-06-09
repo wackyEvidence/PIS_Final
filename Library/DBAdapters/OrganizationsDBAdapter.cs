@@ -35,7 +35,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Тюмень, ул. Пушечная, д. 15" },
                 { "Type", "2"}, 
                 { "Attribute", "1" },
-                { "Location", "0" }
+                { "Location", "Тюмень" }
             }, 
             new Dictionary<string, string>
             {
@@ -46,7 +46,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Санкт-Петербург, ул. Невский проспект, д. 25" },
                 { "Type", "4"}, 
                 { "Attribute", "1" },
-                { "Location", "1" }
+                { "Location", "Санкт-Петербург" }
             }, 
             new Dictionary<string, string>
             {
@@ -57,7 +57,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Тюмень, ул. Ленина, д. 45" },
                 { "Type", "9"}, 
                 { "Attribute", "1" },
-                { "Location", "0" }
+                { "Location", "Тюмень" }
             },
             new Dictionary<string, string>
             {
@@ -68,7 +68,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Санкт-Петербург, ул. Кирова, д. 10" },
                 { "Type", "6"},
                 { "Attribute", "1" },
-                { "Location", "1" }
+                { "Location", "Санкт-Петербург" }
             }, 
             new Dictionary<string, string>
             {
@@ -79,7 +79,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Тюмень, ул. Советская, д. 20" },
                 { "Type", "1"}, 
                 { "Attribute", "1" },
-                { "Location", "0" }
+                { "Location", "Тюмень" }
             }, 
             new Dictionary<string, string> 
             { 
@@ -90,7 +90,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Санкт-Петербург, ул. Ленина, д. 70" },
                 { "Type", "8"}, 
                 { "Attribute", "1" },
-                { "Location", "1" }
+                { "Location", "Санкт-Петербург" }
             }, 
             new Dictionary<string, string>
             {
@@ -101,7 +101,7 @@ namespace Library.DBAdapters
                 { "RegistrationAddress", "г. Санкт-Петербург, ул. Гагарина, д. 25" },
                 { "Type", "5"}, 
                 { "Attribute", "1" },
-                { "Location", "1" }
+                { "Location", "Санкт-Петербург" }
             }
         };
 

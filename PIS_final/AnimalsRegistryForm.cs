@@ -73,7 +73,7 @@ namespace UI
 
         private void addAnimalRecordButton_Click(object sender, EventArgs e)
         {
-            var animalCardForm = new AnimalCardForm(FormMode.Adding, null);
+            var animalCardForm = new AnimalCardForm(FormMode.Adding, null, animalsRegistry);
             animalCardForm.ShowDialog(); 
         }
 
@@ -82,7 +82,7 @@ namespace UI
             if(dataGridView1.SelectedRows.Count > 0)
             {
                 var currentRow = dataGridView1.CurrentRow.Index;
-                var animalCardForm = new AnimalCardForm(FormMode.Adding, animalsList[currentRow]);
+                var animalCardForm = new AnimalCardForm(FormMode.Editing, animalsList[currentRow], animalsRegistry);
                 animalCardForm.ShowDialog();
             }
         }
